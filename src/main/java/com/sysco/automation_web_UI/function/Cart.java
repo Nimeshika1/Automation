@@ -8,4 +8,8 @@ public class Cart extends CartPage {
    public static void clickCartBtn(){
        cartPage.clickCartButton();
    }
+
+//   public static void removeCartItems(){
+//        cartPage.removeCartItem();
+//   }
 }

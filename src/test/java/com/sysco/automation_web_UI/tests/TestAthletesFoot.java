@@ -2,10 +2,7 @@ package com.sysco.automation_web_UI.tests;
 
 import com.sysco.automation_web_UI.data.DashBoardData;
 import com.sysco.automation_web_UI.data.LoginData;
-import com.sysco.automation_web_UI.function.Cart;
-import com.sysco.automation_web_UI.function.DashBoard;
-import com.sysco.automation_web_UI.function.Login;
-import com.sysco.automation_web_UI.function.NavigateHomePage;
+import com.sysco.automation_web_UI.function.*;
 import com.sysco.automation_web_UI.util.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -41,11 +38,15 @@ public class TestAthletesFoot extends TestBase {
         Login.clickLoginButton();
         Assert.assertEquals(DashBoard.getUserData(),dashBoardData.getUserData());
 
-    }
-    @Test(priority = 3)
-    public void verify(){
         Cart.clickCartBtn();
 
+    }
+    @Test(priority = 3)
+    public void verifyItemDetails(){
+        Category.clickWomanCategory();
+        Category.clickItemOfWomanCategory();
+        AddidasWoman.clickProduct();
+        AddToCart.clickAddToCartBtn();
     }
 
 }
